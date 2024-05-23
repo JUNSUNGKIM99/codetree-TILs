@@ -6,7 +6,7 @@ def find_cycle_size(N, P):
     while current not in visited:
         visited[current] = count  # 현재 숫자와 반복 횟수 저장
         count += 1
-
+        # 현재 숫자를 key로 하고 count를 value로 가지고있으면, 다음에 만날때 빼면됨...
         # 다음 숫자 계산
         next_num = (current * N) % P
         current = next_num
