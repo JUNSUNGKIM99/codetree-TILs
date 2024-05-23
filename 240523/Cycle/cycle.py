@@ -1,8 +1,8 @@
 n, p = map(int, input().split())
 i = 0
 backup = n
-number = set()
-for _ in range(100):
+number = set() 
+while True:
     n = (n*backup) % p
     i += 1
     if n in number:
