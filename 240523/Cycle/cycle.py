@@ -4,10 +4,10 @@ backup = n
 number = set() 
 while True:
     n = (n*backup) % p
-    if n in number:
-        i -= 1
+    #print(i, n, number)
+    if n not in number:
+        number.add(n)
+        i += 1
+    else:
         break
-    number.add(n)
-    i += 1
-    
-print(i)
+print(i-1)
