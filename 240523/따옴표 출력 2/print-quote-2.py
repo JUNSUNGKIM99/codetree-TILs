@@ -1,1 +1,1 @@
-print("Sam said "It's a Potato!".")
+print("Sam said "It's a Potato!\".")
