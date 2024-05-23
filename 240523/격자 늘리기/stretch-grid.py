@@ -1,15 +1,10 @@
-def expand_grid(N, M, K, grid):
-    for row in grid:
-        for _ in range(K):
-            print(''.join(row * K))
+n, m, k = map(int, input().split())
+text = []
+for _ in range(n):
+    text.append(input())
 
-def main():
-    N, M, K = map(int, input().split())
-    grid = []
-    for _ in range(N):
-        grid.append(input())
-
-    expand_grid(N, M, K, grid)
-
-if __name__ == "__main__":
-    main()
+for t in text:
+    for _ in range(k):
+        for char in t:
+            print(char*k,end='')
+        print(' ')
