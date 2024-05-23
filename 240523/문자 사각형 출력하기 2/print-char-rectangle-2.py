@@ -8,8 +8,12 @@ def print_square(n):
     char_index = 0
     for i in range(n):
         for j in range(n):
-            grid[i][j] = alphabet[char_index]
-            char_index = (char_index + 1) % 26
+            if j % 2 == 0:
+                grid[i][j] = alphabet[char_index]
+                char_index = (char_index + 1) % 26
+            else:
+                grid[i][n - 1 - j] = alphabet[char_index]
+                char_index = (char_index + 1) % 26
 
     # 격자 출력
     for i in range(n):
