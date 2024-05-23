@@ -4,8 +4,10 @@ backup = n
 number = set() 
 while True:
     n = (n*backup) % p
-    i += 1
     if n in number:
+        i -= 1
         break
     number.add(n)
-print(i-1)
+    i += 1
+    
+print(i)
