@@ -7,4 +7,6 @@ for i in range(n):
         k += 1
     
 for a in arr:
-    print(a)
+    for b in a:
+        print(b)
+    print(' ')
