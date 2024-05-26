@@ -16,5 +16,5 @@ else:
             continue
         
         if n < 0:
-            print(answer)
+            print(-1)
             break
