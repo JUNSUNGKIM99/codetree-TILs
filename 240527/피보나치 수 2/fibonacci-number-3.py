@@ -1,15 +1,13 @@
-import sys
-sys.setrecursionlimit(30000)
+N = int(input())
 
-def fibonacci(n, memo={}):
-    if n in memo:
-        return memo[n]
-    if n == 0:
-        return 0
-    if n == 1:
-        return 1
-    memo[n] = fibonacci(n - 1, memo) + fibonacci(n - 2, memo)
-    return memo[n]
+def fibonacci(n) :
+    if n == 0 :
+        return n
+    a, b = 0, 1 # 초깃값 두 수 
+    for i in range (1, N) :
+        temp= a
+        a = b
+        b= temp+a
+    return b
 
-n = int(input())
-print(fibonacci(n))
+print(fibonacci(N))
