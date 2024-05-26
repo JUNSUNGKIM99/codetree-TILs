@@ -6,7 +6,6 @@ def decrypt_substitution_cipher(encrypted_text, substitution_rule):
     for i in range(26):
         decryption_map[substitution_rule[i]] = chr(ord('a') + i)
     
-    print(decryption_map)
     # 복호화된 문자열 생성
     decrypted_text = ''
     for char in encrypted_text:
