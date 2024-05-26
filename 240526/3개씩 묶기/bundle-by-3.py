@@ -7,11 +7,13 @@ def min_sum_removal(arr):
     if n == 2:
         return arr[0] + arr[1]
     
+    # DP 배열 초기화
     dp = [0] * n
     dp[0] = arr[0]
     dp[1] = arr[0] + arr[1]
     dp[2] = min(dp[1] + arr[2], arr[0] + arr[1] + arr[2] - min(arr[0], arr[1], arr[2]))
     
+    # DP 테이블 채우기
     for i in range(3, n):
         case1 = dp[i-1] + arr[i]
         case2 = dp[i-2] + arr[i-1] + arr[i]
