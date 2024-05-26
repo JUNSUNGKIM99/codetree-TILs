@@ -7,6 +7,9 @@ if n % 5 == 0:
 else:
     while True:
         n -= 3
+        if n < 0:
+            print(-1)
+            break
         answer += 1
         if n % 5 == 0:
             answer += n // 5
@@ -14,7 +17,3 @@ else:
             break
         else:
             continue
-        
-        if n < 0:
-            print(-1)
-            break
