@@ -1,12 +1,15 @@
-def fibonacci(n, memo={}):
-    if n in memo:
-        return memo[n]
+def fibonacci(n):
     if n == 0:
         return 0
-    if n == 1:
+    elif n == 1:
         return 1
-    memo[n] = fibonacci(n - 1, memo) + fibonacci(n - 2, memo)
-    return memo[n]
-
+    
+    dp = [0] * (n + 1)
+    dp[1] = 1
+    
+    for i in range(2, n + 1):
+        dp[i] = dp[i - 1] + dp[i - 2]
+    
+    return dp[n]
 n = int(input())
 print(fibonacci(n))
