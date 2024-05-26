@@ -1,5 +1,5 @@
 import sys
-sys.setrecursionlimit(1500)
+sys.setrecursionlimit(30000)
 
 def fibonacci(n, memo={}):
     if n in memo:
