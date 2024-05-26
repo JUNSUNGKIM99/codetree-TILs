@@ -4,7 +4,7 @@ position = []
 
 for i in range(len(word)-1):
     if tmp.find(word[i]) < tmp.find(word[i+1]):
-        position.appned(1)
+        position.append(1)
     else:
         position.append(0)
 answer = 1
