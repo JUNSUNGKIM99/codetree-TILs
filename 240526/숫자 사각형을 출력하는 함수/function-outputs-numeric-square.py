@@ -8,5 +8,5 @@ for i in range(n):
     
 for a in arr:
     for b in a:
-        print(b)
+        print(b, end=' ')
     print(' ')
