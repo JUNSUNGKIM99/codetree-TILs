@@ -1,5 +1,6 @@
 N = int(input())
-
+import sys
+sys.setrecursionlimit(5000)
 def fibonacci(n) :
     if n == 0 :
         return n
